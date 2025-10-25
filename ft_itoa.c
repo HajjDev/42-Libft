@@ -6,7 +6,7 @@
 /*   By: cel-hajj <cel-hajj@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 11:01:17 by cel-hajj          #+#    #+#             */
-/*   Updated: 2025/10/24 10:45:15 by cel-hajj         ###   ########.fr       */
+/*   Updated: 2025/10/25 12:08:16 by cel-hajj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,3 +78,48 @@ char	*ft_itoa(int n)
 		return (NULL);
 	return (ft_fill(number, ln, neg));
 }
+
+/*
+#include <stdio.h>
+#include <string.h>
+#include <limits.h>
+
+void    test_itoa(int n)
+{
+    char *my_str = ft_itoa(n);
+    char real_str[25];
+    
+    sprintf(real_str, "%d", n);
+
+    printf("Number: %d\n", n);
+    printf("  ft_itoa: \"%s\"\n", my_str);
+    printf("  sprintf: \"%s\"\n", real_str);
+
+    if (my_str && strcmp(my_str, real_str) == 0)
+        printf("  Result: \033[32m[OK]\033[0m\n");
+    else
+        printf("  Result: \033[31m[KO]\033[0m\n");
+    printf("--------------------------------------\n");
+
+    if (my_str)
+        free(my_str);
+}
+
+int main(void)
+{
+    printf("--- Testing ft_itoa ---\n\n");
+
+    test_itoa(42);
+    test_itoa(-42);
+    test_itoa(0);
+    test_itoa(123456789);
+    test_itoa(-987654321);
+    test_itoa(INT_MAX);
+    test_itoa(INT_MIN);
+    test_itoa(1);
+    test_itoa(-1);
+    
+    printf("--- End of tests ---\n");
+    return (0);
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: cel-hajj <cel-hajj@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 10:51:49 by cel-hajj          #+#    #+#             */
-/*   Updated: 2025/10/24 15:50:42 by cel-hajj         ###   ########.fr       */
+/*   Updated: 2025/10/25 12:18:52 by cel-hajj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,3 +106,70 @@ char	**ft_split(char const *s, char c)
 	tab[j] = NULL;
 	return (tab);
 }
+
+/*
+#include <stdio.h>
+
+static void free_split_array(char **array)
+{
+    if (!array)
+        return;
+    for (int i = 0; array[i] != NULL; i++)
+    {
+        free(array[i]);
+    }
+    free(array);
+}
+
+static void print_split_array(char **array)
+{
+    if (!array)
+    {
+        printf("  Result: (NULL)\n");
+        return;
+    }
+    printf("  Result: {\n");
+    int i;
+    for (i = 0; array[i] != NULL; i++)
+    {
+        printf("    [%d]: \"%s\"\n", i, array[i]);
+    }
+    printf("    [%d]: (NULL)\n", i);
+    printf("  }\n");
+}
+
+static void test_split(char const *s, char c)
+{
+    printf("--- Test ---\n");
+    printf("  String: \"%s\"\n", s);
+    printf("  Delimiter: '%c'\n", c);
+    
+    char **result = ft_split(s, c);
+    
+    print_split_array(result);
+    free_split_array(result);
+    printf("------------\n");
+}
+
+int main(void)
+{
+    printf("=== Testing ft_split ===\n\n");
+
+    test_split("Hello world this is a test", ' ');
+    test_split(",,,Hello,,,world,,", ',');
+    test_split("   leading spaces", ' ');
+    test_split("trailing spaces   ", ' ');
+    test_split("   both   ", ' ');
+    test_split("          ", ' ');
+    test_split("", ' ');
+    test_split(NULL, ' ');
+    test_split("nowhitespace", ' ');
+    test_split("noddelimiter", 'z');
+    test_split("c", 'c');
+    test_split("split z on z", 'z');
+    test_split("one", ' ');
+
+    printf("\n=== End of tests ===\n");
+    return (0);
+}
+*/
